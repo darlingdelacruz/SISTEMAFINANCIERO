@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataCredito" targetNamespace="http://tempuri.org/DataCredito.xsd" xmlns:mstns="http://tempuri.org/DataCredito.xsd" xmlns="http://tempuri.org/DataCredito.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PRESTAMOSConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PRESTAMOSConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PRESTAMOS2.Properties.Settings.GlobalReference.Default.PRESTAMOSConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CreditoTableAdapter" GeneratorDataComponentClassName="CreditoTableAdapter" Name="Credito" UserDataComponentName="CreditoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PRESTAMOSConnectionString1 (Settings)" DbObjectName="PRESTAMOS.dbo.Credito" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Cedula, SUBSTRING(NombreCompleto, 1, 2) AS CODIGO, SUBSTRING(Cedula, 5, 7) AS CODIGO2, NombreCompleto, SUM(Cuota) AS Deuda
+FROM            Credito
+GROUP BY Cedula, NombreCompleto</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CODIGO" DataSetColumn="CODIGO" />
+              <Mapping SourceColumn="CODIGO2" DataSetColumn="CODIGO2" />
+              <Mapping SourceColumn="Deuda" DataSetColumn="Deuda" />
+              <Mapping SourceColumn="Cedula" DataSetColumn="Cedula" />
+              <Mapping SourceColumn="NombreCompleto" DataSetColumn="NombreCompleto" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataCredito" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataCredito" msprop:Generator_UserDSName="DataCredito">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Credito" msprop:Generator_TableClassName="CreditoDataTable" msprop:Generator_TableVarName="tableCredito" msprop:Generator_RowChangedName="CreditoRowChanged" msprop:Generator_TablePropName="Credito" msprop:Generator_RowDeletingName="CreditoRowDeleting" msprop:Generator_RowChangingName="CreditoRowChanging" msprop:Generator_RowEvHandlerName="CreditoRowChangeEventHandler" msprop:Generator_RowDeletedName="CreditoRowDeleted" msprop:Generator_RowClassName="CreditoRow" msprop:Generator_UserTableName="Credito" msprop:Generator_RowEvArgName="CreditoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODIGO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCODIGO" msprop:Generator_ColumnPropNameInRow="CODIGO" msprop:Generator_ColumnPropNameInTable="CODIGOColumn" msprop:Generator_UserColumnName="CODIGO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODIGO2" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCODIGO2" msprop:Generator_ColumnPropNameInRow="CODIGO2" msprop:Generator_ColumnPropNameInTable="CODIGO2Column" msprop:Generator_UserColumnName="CODIGO2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Deuda" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDeuda" msprop:Generator_ColumnPropNameInRow="Deuda" msprop:Generator_ColumnPropNameInTable="DeudaColumn" msprop:Generator_UserColumnName="Deuda" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Cedula" msprop:Generator_ColumnVarNameInTable="columnCedula" msprop:Generator_ColumnPropNameInRow="Cedula" msprop:Generator_ColumnPropNameInTable="CedulaColumn" msprop:Generator_UserColumnName="Cedula">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NombreCompleto" msprop:Generator_ColumnVarNameInTable="columnNombreCompleto" msprop:Generator_ColumnPropNameInRow="NombreCompleto" msprop:Generator_ColumnPropNameInTable="NombreCompletoColumn" msprop:Generator_UserColumnName="NombreCompleto">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

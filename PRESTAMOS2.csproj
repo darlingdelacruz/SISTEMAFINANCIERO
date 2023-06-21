@@ -1,0 +1,1138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{285373FB-2A8B-4860-8052-9A177F1D23D1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PRESTAMOS2</RootNamespace>
+    <AssemblyName>PRESTAMOS2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publicar\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Portada-Educación-Financiera.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.8.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.8.3\lib\net40\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abono.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Abono.Designer.cs">
+      <DependentUpon>Abono.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ACCESOPAGAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ACCESOPAGAR.Designer.cs">
+      <DependentUpon>ACCESOPAGAR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Amores.cs">
+      <DependentUpon>Amores.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Amores.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Amores.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="balancesnuevos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>balancesnuevos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="balanzaklok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="balanzaklok.Designer.cs">
+      <DependentUpon>balanzaklok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="balanzanew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="balanzanew.Designer.cs">
+      <DependentUpon>balanzanew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="balanzanuevaera.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>balanzanuevaera.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Calculadora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calculadora.Designer.cs">
+      <DependentUpon>Calculadora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Carta1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Carta1.Designer.cs">
+      <DependentUpon>Carta1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CartaDatos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CartaDatos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CartadeSaldo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CartadeSaldo.Designer.cs">
+      <DependentUpon>CartadeSaldo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CATALOGO DE CUENTA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CATALOGO DE CUENTA.Designer.cs">
+      <DependentUpon>CATALOGO DE CUENTA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo.Designer.cs">
+      <DependentUpon>Catalogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ConciliacionCliente.cs">
+      <DependentUpon>ConciliacionCliente.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConciliacionCliente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConciliacionCliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="conexion.cs" />
+    <Compile Include="Consulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta.Designer.cs">
+      <DependentUpon>Consulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreacionCuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreacionCuentas.Designer.cs">
+      <DependentUpon>CreacionCuentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrearCatalogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearCatalogo.Designer.cs">
+      <DependentUpon>CrearCatalogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrearCredito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearCredito.Designer.cs">
+      <DependentUpon>CrearCredito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrearUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearUsuarios.Designer.cs">
+      <DependentUpon>CrearUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataCredito.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataCredito.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DEPOSITO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DEPOSITO.Designer.cs">
+      <DependentUpon>DEPOSITO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarCliente.Designer.cs">
+      <DependentUpon>EditarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarCliente.Designer.cs">
+      <DependentUpon>EliminarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entrada de diario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entrada de diario.Designer.cs">
+      <DependentUpon>Entrada de diario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entrada.Designer.cs">
+      <DependentUpon>Entrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entradadatos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>entradadatos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="entradafecha.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>entradafecha.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EntradaPorfecha.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntradaPorfecha.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FechaCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FechaCuenta.Designer.cs">
+      <DependentUpon>FechaCuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FECHASDETALLADAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FECHASDETALLADAS.Designer.cs">
+      <DependentUpon>FECHASDETALLADAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditar.Designer.cs">
+      <DependentUpon>frmEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralGenerado.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GeneralGenerado.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Generalr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Generalr.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio.Designer.cs">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InteresesIndividuales.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InteresesIndividuales.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InteresesPagadoIndividual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteresesPagadoIndividual.Designer.cs">
+      <DependentUpon>InteresesPagadoIndividual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InteresesPagados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InteresesPagados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InteresPagado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteresPagado.Designer.cs">
+      <DependentUpon>InteresPagado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InteresPagadoFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InteresPagadoFecha.Designer.cs">
+      <DependentUpon>InteresPagadoFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loggin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loggin.Designer.cs">
+      <DependentUpon>Loggin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loyal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Loyal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="mamaguevo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mamaguevo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="maxima.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>maxima.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MD.Designer.cs">
+      <DependentUpon>MD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Movimientocompleto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Movimientocompleto.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pagos.Designer.cs">
+      <DependentUpon>Pagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRESTAMOSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PRESTAMOSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PRESTAMOSDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PRESTAMOSDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PRESTAMOSDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PRESTAMOSDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PRESTAMOSDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PRESTAMOSDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PRESTAMOSDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PRESTAMOSDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporte General.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte General.Designer.cs">
+      <DependentUpon>Reporte General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteCliente.Designer.cs">
+      <DependentUpon>ReporteCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportedecuentas1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reportedecuentas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportedemovimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportedemovimientos.Designer.cs">
+      <DependentUpon>Reportedemovimientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportedemovimientototal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportedemovimientototal.Designer.cs">
+      <DependentUpon>Reportedemovimientototal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteEntrada1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteEntrada1.Designer.cs">
+      <DependentUpon>ReporteEntrada1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteFecha.Designer.cs">
+      <DependentUpon>ReporteFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteGanancias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteGanancias.Designer.cs">
+      <DependentUpon>ReporteGanancias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteGeneralizado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteGeneralizado.Designer.cs">
+      <DependentUpon>ReporteGeneralizado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reporteInteresesPagadoIndividual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reporteInteresesPagadoIndividual.Designer.cs">
+      <DependentUpon>reporteInteresesPagadoIndividual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportemovimientodecuentadetallada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportemovimientodecuentadetallada.Designer.cs">
+      <DependentUpon>Reportemovimientodecuentadetallada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportePagadoCompleto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportePagadoCompleto.Designer.cs">
+      <DependentUpon>ReportePagadoCompleto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportePagadosF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportePagadosF.Designer.cs">
+      <DependentUpon>ReportePagadosF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportePagoInteres.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportePagoInteres.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportepagosPendiente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportepagosPendiente.Designer.cs">
+      <DependentUpon>ReportepagosPendiente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportePorTipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportePorTipos.Designer.cs">
+      <DependentUpon>ReportePorTipos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteTipoPendiente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteTipoPendiente.Designer.cs">
+      <DependentUpon>ReporteTipoPendiente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteTipos2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteTipos2.Designer.cs">
+      <DependentUpon>ReporteTipos2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Retiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Retiro.Designer.cs">
+      <DependentUpon>Retiro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Solonumero.cs" />
+    <Compile Include="TABLAMOVIMIENTOS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TABLAMOVIMIENTOS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TraerGanancias.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TraerGanancias.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TraerPagados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TraerPagados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TraerPendiente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TraerPendiente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Transferencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transferencias.Designer.cs">
+      <DependentUpon>Transferencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="verentrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="verentrada.Designer.cs">
+      <DependentUpon>verentrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewConcilicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewConcilicion.Designer.cs">
+      <DependentUpon>ViewConcilicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaConcicliacionFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaConcicliacionFecha.Designer.cs">
+      <DependentUpon>VistaConcicliacionFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaDataCredito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaDataCredito.Designer.cs">
+      <DependentUpon>VistaDataCredito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vistafecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistafecha.Designer.cs">
+      <DependentUpon>vistafecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ya.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ya.Designer.cs">
+      <DependentUpon>ya.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ya1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ya1.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Abono.resx">
+      <DependentUpon>Abono.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ACCESOPAGAR.resx">
+      <DependentUpon>ACCESOPAGAR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="balanzaklok.resx">
+      <DependentUpon>balanzaklok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="balanzanew.resx">
+      <DependentUpon>balanzanew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calculadora.resx">
+      <DependentUpon>Calculadora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Carta1.resx">
+      <DependentUpon>Carta1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CartadeSaldo.resx">
+      <DependentUpon>CartadeSaldo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CATALOGO DE CUENTA.resx">
+      <DependentUpon>CATALOGO DE CUENTA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo.resx">
+      <DependentUpon>Catalogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta.resx">
+      <DependentUpon>Consulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreacionCuentas.resx">
+      <DependentUpon>CreacionCuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearCatalogo.resx">
+      <DependentUpon>CrearCatalogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearCredito.resx">
+      <DependentUpon>CrearCredito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearUsuarios.resx">
+      <DependentUpon>CrearUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DEPOSITO.resx">
+      <DependentUpon>DEPOSITO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarCliente.resx">
+      <DependentUpon>EditarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarCliente.resx">
+      <DependentUpon>EliminarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entrada de diario.resx">
+      <DependentUpon>Entrada de diario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entrada.resx">
+      <DependentUpon>Entrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FechaCuenta.resx">
+      <DependentUpon>FechaCuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FECHASDETALLADAS.resx">
+      <DependentUpon>FECHASDETALLADAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditar.resx">
+      <DependentUpon>frmEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio.resx">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InteresesPagadoIndividual.resx">
+      <DependentUpon>InteresesPagadoIndividual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InteresPagado.resx">
+      <DependentUpon>InteresPagado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InteresPagadoFecha.resx">
+      <DependentUpon>InteresPagadoFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loggin.resx">
+      <DependentUpon>Loggin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MD.resx">
+      <DependentUpon>MD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pagos.resx">
+      <DependentUpon>Pagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report1.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report10.rdlc" />
+    <EmbeddedResource Include="Report11.rdlc" />
+    <EmbeddedResource Include="Report12.rdlc" />
+    <EmbeddedResource Include="Report13.rdlc" />
+    <EmbeddedResource Include="Report14.rdlc" />
+    <EmbeddedResource Include="Report15.rdlc" />
+    <EmbeddedResource Include="Report16.rdlc" />
+    <EmbeddedResource Include="Report17.rdlc" />
+    <EmbeddedResource Include="Report18.rdlc" />
+    <EmbeddedResource Include="Report19.rdlc" />
+    <EmbeddedResource Include="Report20.rdlc" />
+    <EmbeddedResource Include="Report21.rdlc" />
+    <EmbeddedResource Include="Report22.rdlc" />
+    <EmbeddedResource Include="Report23.rdlc" />
+    <EmbeddedResource Include="Report24.rdlc" />
+    <EmbeddedResource Include="Report25.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
+    <EmbeddedResource Include="Report5.rdlc" />
+    <EmbeddedResource Include="Report6.rdlc" />
+    <EmbeddedResource Include="Report7.rdlc" />
+    <EmbeddedResource Include="Report8.rdlc" />
+    <EmbeddedResource Include="Report9.rdlc" />
+    <EmbeddedResource Include="Reporte General.resx">
+      <DependentUpon>Reporte General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteCliente.resx">
+      <DependentUpon>ReporteCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportedemovimientos.resx">
+      <DependentUpon>Reportedemovimientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportedemovimientototal.resx">
+      <DependentUpon>Reportedemovimientototal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteEntrada1.resx">
+      <DependentUpon>ReporteEntrada1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteFecha.resx">
+      <DependentUpon>ReporteFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteGanancias.resx">
+      <DependentUpon>ReporteGanancias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteGeneralizado.resx">
+      <DependentUpon>ReporteGeneralizado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporteInteresesPagadoIndividual.resx">
+      <DependentUpon>reporteInteresesPagadoIndividual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportemovimientodecuentadetallada.resx">
+      <DependentUpon>Reportemovimientodecuentadetallada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportePagadoCompleto.resx">
+      <DependentUpon>ReportePagadoCompleto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportePagadosF.resx">
+      <DependentUpon>ReportePagadosF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportepagosPendiente.resx">
+      <DependentUpon>ReportepagosPendiente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportePorTipos.resx">
+      <DependentUpon>ReportePorTipos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteTipoPendiente.resx">
+      <DependentUpon>ReporteTipoPendiente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteTipos2.resx">
+      <DependentUpon>ReporteTipos2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Retiro.resx">
+      <DependentUpon>Retiro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transferencias.resx">
+      <DependentUpon>Transferencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="verentrada.resx">
+      <DependentUpon>verentrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewConcilicion.resx">
+      <DependentUpon>ViewConcilicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaConcicliacionFecha.resx">
+      <DependentUpon>VistaConcicliacionFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaDataCredito.resx">
+      <DependentUpon>VistaDataCredito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistafecha.resx">
+      <DependentUpon>vistafecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ya.resx">
+      <DependentUpon>ya.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Amores.xsc">
+      <DependentUpon>Amores.xsd</DependentUpon>
+    </None>
+    <None Include="Amores.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Amores.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Amores.xss">
+      <DependentUpon>Amores.xsd</DependentUpon>
+    </None>
+    <None Include="balancesnuevos.xsc">
+      <DependentUpon>balancesnuevos.xsd</DependentUpon>
+    </None>
+    <None Include="balancesnuevos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>balancesnuevos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="balancesnuevos.xss">
+      <DependentUpon>balancesnuevos.xsd</DependentUpon>
+    </None>
+    <None Include="balanzanuevaera.xsc">
+      <DependentUpon>balanzanuevaera.xsd</DependentUpon>
+    </None>
+    <None Include="balanzanuevaera.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>balanzanuevaera.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="balanzanuevaera.xss">
+      <DependentUpon>balanzanuevaera.xsd</DependentUpon>
+    </None>
+    <None Include="CartaDatos.xsc">
+      <DependentUpon>CartaDatos.xsd</DependentUpon>
+    </None>
+    <None Include="CartaDatos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CartaDatos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CartaDatos.xss">
+      <DependentUpon>CartaDatos.xsd</DependentUpon>
+    </None>
+    <None Include="Cliente.xsc">
+      <DependentUpon>Cliente.xsd</DependentUpon>
+    </None>
+    <None Include="Cliente.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Cliente.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Cliente.xss">
+      <DependentUpon>Cliente.xsd</DependentUpon>
+    </None>
+    <None Include="ConciliacionCliente.xsc">
+      <DependentUpon>ConciliacionCliente.xsd</DependentUpon>
+    </None>
+    <None Include="ConciliacionCliente.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConciliacionCliente.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ConciliacionCliente.xss">
+      <DependentUpon>ConciliacionCliente.xsd</DependentUpon>
+    </None>
+    <None Include="DataCredito.xsc">
+      <DependentUpon>DataCredito.xsd</DependentUpon>
+    </None>
+    <None Include="DataCredito.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataCredito.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataCredito.xss">
+      <DependentUpon>DataCredito.xsd</DependentUpon>
+    </None>
+    <None Include="entradadatos.xsc">
+      <DependentUpon>entradadatos.xsd</DependentUpon>
+    </None>
+    <None Include="entradadatos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>entradadatos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="entradadatos.xss">
+      <DependentUpon>entradadatos.xsd</DependentUpon>
+    </None>
+    <None Include="entradafecha.xsc">
+      <DependentUpon>entradafecha.xsd</DependentUpon>
+    </None>
+    <None Include="entradafecha.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>entradafecha.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="entradafecha.xss">
+      <DependentUpon>entradafecha.xsd</DependentUpon>
+    </None>
+    <None Include="EntradaPorfecha.xsc">
+      <DependentUpon>EntradaPorfecha.xsd</DependentUpon>
+    </None>
+    <None Include="EntradaPorfecha.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EntradaPorfecha.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="EntradaPorfecha.xss">
+      <DependentUpon>EntradaPorfecha.xsd</DependentUpon>
+    </None>
+    <None Include="GeneralGenerado.xsc">
+      <DependentUpon>GeneralGenerado.xsd</DependentUpon>
+    </None>
+    <None Include="GeneralGenerado.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GeneralGenerado.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GeneralGenerado.xss">
+      <DependentUpon>GeneralGenerado.xsd</DependentUpon>
+    </None>
+    <None Include="Generalr.xsc">
+      <DependentUpon>Generalr.xsd</DependentUpon>
+    </None>
+    <None Include="Generalr.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Generalr.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Generalr.xss">
+      <DependentUpon>Generalr.xsd</DependentUpon>
+    </None>
+    <None Include="InteresesIndividuales.xsc">
+      <DependentUpon>InteresesIndividuales.xsd</DependentUpon>
+    </None>
+    <None Include="InteresesIndividuales.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InteresesIndividuales.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="InteresesIndividuales.xss">
+      <DependentUpon>InteresesIndividuales.xsd</DependentUpon>
+    </None>
+    <None Include="InteresesPagados.xsc">
+      <DependentUpon>InteresesPagados.xsd</DependentUpon>
+    </None>
+    <None Include="InteresesPagados.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InteresesPagados.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="InteresesPagados.xss">
+      <DependentUpon>InteresesPagados.xsd</DependentUpon>
+    </None>
+    <None Include="Loyal.xsc">
+      <DependentUpon>Loyal.xsd</DependentUpon>
+    </None>
+    <None Include="Loyal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Loyal.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Loyal.xss">
+      <DependentUpon>Loyal.xsd</DependentUpon>
+    </None>
+    <None Include="mamaguevo.xsc">
+      <DependentUpon>mamaguevo.xsd</DependentUpon>
+    </None>
+    <None Include="mamaguevo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>mamaguevo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="mamaguevo.xss">
+      <DependentUpon>mamaguevo.xsd</DependentUpon>
+    </None>
+    <None Include="maxima.xsc">
+      <DependentUpon>maxima.xsd</DependentUpon>
+    </None>
+    <None Include="maxima.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>maxima.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="maxima.xss">
+      <DependentUpon>maxima.xsd</DependentUpon>
+    </None>
+    <None Include="Movimientocompleto.xsc">
+      <DependentUpon>Movimientocompleto.xsd</DependentUpon>
+    </None>
+    <None Include="Movimientocompleto.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Movimientocompleto.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Movimientocompleto.xss">
+      <DependentUpon>Movimientocompleto.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="PRESTAMOSDataSet.xsc">
+      <DependentUpon>PRESTAMOSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PRESTAMOSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PRESTAMOSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PRESTAMOSDataSet.xss">
+      <DependentUpon>PRESTAMOSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PRESTAMOSDataSet1.xsc">
+      <DependentUpon>PRESTAMOSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PRESTAMOSDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PRESTAMOSDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PRESTAMOSDataSet1.xss">
+      <DependentUpon>PRESTAMOSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PRESTAMOSDataSet2.xsc">
+      <DependentUpon>PRESTAMOSDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="PRESTAMOSDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PRESTAMOSDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PRESTAMOSDataSet2.xss">
+      <DependentUpon>PRESTAMOSDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="PRESTAMOSDataSet3.xsc">
+      <DependentUpon>PRESTAMOSDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="PRESTAMOSDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PRESTAMOSDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PRESTAMOSDataSet3.xss">
+      <DependentUpon>PRESTAMOSDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="PRESTAMOSDataSet4.xsc">
+      <DependentUpon>PRESTAMOSDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="PRESTAMOSDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PRESTAMOSDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PRESTAMOSDataSet4.xss">
+      <DependentUpon>PRESTAMOSDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="reportedecuentas.xsc">
+      <DependentUpon>reportedecuentas.xsd</DependentUpon>
+    </None>
+    <None Include="reportedecuentas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>reportedecuentas1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="reportedecuentas.xss">
+      <DependentUpon>reportedecuentas.xsd</DependentUpon>
+    </None>
+    <None Include="ReportePagoInteres.xsc">
+      <DependentUpon>ReportePagoInteres.xsd</DependentUpon>
+    </None>
+    <None Include="ReportePagoInteres.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportePagoInteres.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReportePagoInteres.xss">
+      <DependentUpon>ReportePagoInteres.xsd</DependentUpon>
+    </None>
+    <None Include="TABLAMOVIMIENTOS.xsc">
+      <DependentUpon>TABLAMOVIMIENTOS.xsd</DependentUpon>
+    </None>
+    <None Include="TABLAMOVIMIENTOS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TABLAMOVIMIENTOS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TABLAMOVIMIENTOS.xss">
+      <DependentUpon>TABLAMOVIMIENTOS.xsd</DependentUpon>
+    </None>
+    <None Include="TraerGanancias.xsc">
+      <DependentUpon>TraerGanancias.xsd</DependentUpon>
+    </None>
+    <None Include="TraerGanancias.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TraerGanancias.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TraerGanancias.xss">
+      <DependentUpon>TraerGanancias.xsd</DependentUpon>
+    </None>
+    <None Include="TraerPagados.xsc">
+      <DependentUpon>TraerPagados.xsd</DependentUpon>
+    </None>
+    <None Include="TraerPagados.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TraerPagados.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TraerPagados.xss">
+      <DependentUpon>TraerPagados.xsd</DependentUpon>
+    </None>
+    <None Include="TraerPendiente.xsc">
+      <DependentUpon>TraerPendiente.xsd</DependentUpon>
+    </None>
+    <None Include="TraerPendiente.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TraerPendiente.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TraerPendiente.xss">
+      <DependentUpon>TraerPendiente.xsd</DependentUpon>
+    </None>
+    <None Include="ya1.xsc">
+      <DependentUpon>ya1.xsd</DependentUpon>
+    </None>
+    <None Include="ya1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ya1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ya1.xss">
+      <DependentUpon>ya1.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Portada-Educación-Financiera.ico" />
+    <None Include="Resources\perfil-de-cliente-e1549901099803-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.4.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 4.0 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
